@@ -16,6 +16,7 @@ class Login extends Component {
 
   async checkAuthentication() {
     const authenticated = await this.props.auth.isAuthenticated();
+    console.log(authenticated);
     if (authenticated !== this.state.authenticated) {
       this.setState({ authenticated });
     }
@@ -36,6 +37,7 @@ class Login extends Component {
   }
 
   render() {
+    console.log(this.state.authenticated);
     if (this.state.authenticated === null) return null;
     return this.state.authenticated ?
       <Redirect to={{ pathname: '/' }}/> :
