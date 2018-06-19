@@ -11,18 +11,12 @@ const NavBar = (props) => {
         </button>
 
         <div className="collapse navbar-collapse" id="navbarSupportedContent">
-          <ul className="navbar-nav mr-auto">
+          <ul className="navbar-nav ml-auto">
             <li className="nav-item active">
               <Link className="nav-link" to="/">Home <span className="sr-only">(current)</span></Link>
             </li>
-            <li className="nav-item dropdown">
-              <Link className="nav-link dropdown-toggle" to="/" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                Dropdown
-              </Link>
-              <div className="dropdown-menu" aria-labelledby="navbarDropdown">
-                <Link className="dropdown-item" to="/">Home</Link>
-                <Link className="dropdown-item" to="/staff">Staff</Link>
-              </div>
+            <li className="nav-item">
+              <Link className="nav-link" to="/staff">Staff <span className="sr-only">(current)</span></Link>
             </li>
           </ul>
         </div>
